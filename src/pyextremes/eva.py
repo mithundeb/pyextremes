@@ -1611,7 +1611,7 @@ class EVA:
         """
         with plt.rc_context(rc=pyextremes_rc):
             # Create figure
-            fig = plt.figure(figsize=figsize, dpi=96)
+            fig = plt.figure(figsize=figsize, dpi=300)
 
             # Create gridspec
             gs = matplotlib.gridspec.GridSpec(
