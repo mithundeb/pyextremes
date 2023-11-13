@@ -821,7 +821,6 @@ class EVA:
     def plot_extremes(
         self,
         figsize: tuple = (8, 5),
-        dpi: 300,
         ax: typing.Optional[plt.Axes] = None,
         show_clusters: bool = False,
     ) -> typing.Tuple[plt.Figure, plt.Axes]:  # pragma: no cover
@@ -861,6 +860,7 @@ class EVA:
             threshold=self.extremes_kwargs.get("threshold", None),
             r=self.extremes_kwargs.get("r", None) if show_clusters else None,
             figsize=figsize,
+            dpi=300,
             ax=ax,
         )
 
