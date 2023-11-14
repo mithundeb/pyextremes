@@ -823,7 +823,8 @@ class EVA:
         figsize: tuple = (8, 5),
         ax: typing.Optional[plt.Axes] = None,
         show_clusters: bool = False,
-    ) -> typing.Tuple[plt.Figure, plt.Axes, dpi=300]:  # adding dpi here
+        dpi: int = 300,  # Add DPI as a parameter with a default value - mdeb
+    ) -> typing.Tuple[plt.Figure, plt.Axes]:
         """
         Plot extreme events.
 
@@ -861,6 +862,7 @@ class EVA:
             r=self.extremes_kwargs.get("r", None) if show_clusters else None,
             figsize=figsize,
             ax=ax,
+            dpi=dpi  # Pass DPI to the underlying function - mdeb
         )
 
     @typing.overload
