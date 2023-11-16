@@ -1640,6 +1640,8 @@ class EVA:
             )
             ax_rv.set_title("Return value plot")
             ax_rv.grid(False, which="both")
+            ax_rv.set_ylim(0, 2.0)
+            ax_rv.set_ylabel("skew surge [in meters]")
 
             # Plot PDF
             pdf_support = np.linspace(self.extremes.min(), self.extremes.max(), 100)
@@ -1680,7 +1682,9 @@ class EVA:
                 lw=0.5,
                 zorder=15,
             )
-            ax_pdf.set_ylim(0, ax_pdf.get_ylim()[1])
+            #ax_pdf.set_ylim(0, ax_pdf.get_ylim()[1])
+            ax_pdf.set_xlim(0, 2.0)
+            ax_pdf.set_ylim(0, 10.0)
 
             # Plot Q-Q plot
             self.plot_probability(
@@ -1690,6 +1694,8 @@ class EVA:
                 ax=ax_qq,
             )
             ax_qq.set_title("Q-Q plot")
+            ax_pdf.set_xlim(0, 2.0)
+            ax_pdf.set_ylim(0, 2.0)
 
             # Plot P-P plot
             self.plot_probability(
