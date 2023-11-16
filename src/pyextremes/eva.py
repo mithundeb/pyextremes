@@ -1650,6 +1650,7 @@ class EVA:
             ax_pdf.set_title("Probability density plot")
             ax_pdf.set_ylabel("Probability density")
             ax_pdf.set_xlabel(self.data.name)
+            ax_pdf.set_ylim(0, 10.0) #mdeb
             ax_pdf.hist(
                 self.extremes.values,
                 bins=np.histogram_bin_edges(a=self.extremes.values, bins="auto"),
@@ -1661,6 +1662,7 @@ class EVA:
                 alpha=0.25,
                 zorder=5,
             )
+            ax_pdf.set_ylim(0, 10.0) #mdeb
             ax_pdf.hist(
                 self.extremes.values,
                 bins=np.histogram_bin_edges(a=self.extremes.values, bins="auto"),
@@ -1672,6 +1674,7 @@ class EVA:
                 ls="--",
                 zorder=10,
             )
+            ax_pdf.set_ylim(0, 10.0) #mdeb
             ax_pdf.plot(pdf_support, pdf, color="#F85C50", lw=2, ls="-", zorder=15)
             ax_pdf.scatter(
                 self.extremes.values,
@@ -1683,8 +1686,8 @@ class EVA:
                 zorder=15,
             )
             #ax_pdf.set_ylim(0, ax_pdf.get_ylim()[1])
-            ax_pdf.set_xlim(0, 2.0)
-            ax_pdf.set_ylim(0, 10.0)
+            ax_pdf.set_xlim(0, 2.0) #mdeb
+            ax_pdf.set_ylim(0, 10.0) #mdeb
 
             # Plot Q-Q plot
             self.plot_probability(
