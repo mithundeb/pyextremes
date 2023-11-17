@@ -1685,7 +1685,7 @@ class EVA:
             #ax_pdf.set_ylim(0, ax_pdf.get_ylim()[1])
             ax_pdf.set_xlim(0, 1.5) #mdeb
             #ax_pdf.set_ylim(0, 10.0) #mdeb
-            ax_pdf.set_ylim(bottom=0, top=10.0) #mdeb
+            ax_pdf.set_ylim(bottom=0, top=6.0) #mdeb
 
             # Plot Q-Q plot
             self.plot_probability(
