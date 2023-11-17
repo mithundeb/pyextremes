@@ -68,7 +68,7 @@ def plot_probability(
         # Plot a diagonal perfect-fit line
         #min_value = min([min(ax.get_xlim()), min(ax.get_ylim())])
         #max_value = max([max(ax.get_xlim()), max(ax.get_ylim())])
-        min_value = min([min(ax.get_xlim()), min(ax.get_ylim())])
+        min_value = 0.0 #mdeb
         max_value = 1.5 #mdeb
         ax.plot(
             [min_value, max_value],
