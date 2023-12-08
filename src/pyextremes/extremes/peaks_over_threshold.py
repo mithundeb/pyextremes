@@ -119,5 +119,5 @@ def get_extremes_peaks_over_threshold(
         data=extreme_values,
         index=pd.Index(data=extreme_indices, name=ts.index.name or "date-time"),
         dtype=np.float64,
-        name=ts.name or "extreme values",
+        name=ts.name or "skew surge [in m]",
     )
