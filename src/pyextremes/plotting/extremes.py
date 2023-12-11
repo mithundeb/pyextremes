@@ -188,7 +188,6 @@ def plot_extremes(
             # Set axes limits  #mdeb
             min_value = 0.0
             max_value = 1.5
-            ax.set_xlim(min_value, max_value)
             ax.set_ylim(min_value, max_value)
 
 
