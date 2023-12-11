@@ -185,6 +185,13 @@ def plot_extremes(
             # Plot threshold line
             ax.axhline(threshold, ls="--", lw=1, color="#FF756B", zorder=15)
 
+            # Set axes limits  #mdeb
+            min_value = 0.0
+            max_value = 1.5
+            ax.set_xlim(min_value, max_value)
+            ax.set_ylim(min_value, max_value)
+
+
         fig.autofmt_xdate()
 
         return fig, ax
