@@ -7,6 +7,8 @@ import pandas as pd
 from pyextremes.extremes.peaks_over_threshold import _generate_clusters
 from pyextremes.plotting.style import pyextremes_rc
 
+matplotlib.rcParams.update({'font.size': 14})
+
 
 def _plot_cluster(ax: plt.Axes, cluster: pd.Series) -> None:
     if len(cluster) >= 2:
@@ -113,6 +115,7 @@ def plot_extremes(
 
         # Plot signal time series
         ax.plot(ts.index, ts.values, ls="-", color="#5199FF", lw=0.25, zorder=10)
+
 
         # Plot extreme events
         ax.scatter(
