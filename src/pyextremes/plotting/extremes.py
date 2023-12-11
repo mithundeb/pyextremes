@@ -132,6 +132,11 @@ def plot_extremes(
         ax.set_xlabel(extremes.index.name or "date-time")
         ax.set_ylabel(extremes.name or "Extreme value")
 
+        # Set axes limits  #mdeb
+        min_value = 0.0
+        max_value = 1.5
+        ax.set_ylim(min_value, max_value)
+
         if extremes_method == "BM":
             # Infer 'block_size'
             if block_size is None:
@@ -184,12 +189,6 @@ def plot_extremes(
 
             # Plot threshold line
             ax.axhline(threshold, ls="--", lw=1, color="#FF756B", zorder=15)
-
-            # Set axes limits  #mdeb
-            min_value = 0.0
-            max_value = 1.5
-            ax.set_ylim(min_value, max_value)
-
 
         fig.autofmt_xdate()
 
