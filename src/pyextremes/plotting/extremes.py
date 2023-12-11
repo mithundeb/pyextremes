@@ -7,7 +7,7 @@ import pandas as pd
 from pyextremes.extremes.peaks_over_threshold import _generate_clusters
 from pyextremes.plotting.style import pyextremes_rc
 
-matplotlib.rcParams.update({'font.size': 14})
+plt.rcParams.update({"font.size": 16}) #mdeb
 
 
 def _plot_cluster(ax: plt.Axes, cluster: pd.Series) -> None:
