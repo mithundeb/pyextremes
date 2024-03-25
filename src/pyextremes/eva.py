@@ -1641,7 +1641,7 @@ class EVA:
             ax_rv.set_title("Return value plot")
             ax_rv.grid(False, which="both")
             ax_rv.set_ylim(0, 1.5)
-            ax_rv.set_ylabel("skew surge [in meters]")
+            ax_rv.set_ylabel("floodwater depth [in meters]")
 
             # Plot PDF
             pdf_support = np.linspace(self.extremes.min(), self.extremes.max(), 100)
