@@ -83,6 +83,8 @@ def plot_return_values(
         ax.grid(True, which="both")
         ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{x:,.0f}"))
 
+        ax.xlim(0, None) # mdeb - trying to fix the negative xlim issue
+
         # Plot modeled confidence intervals
         for col in ["lower ci", "upper ci"]:
             ax.plot(
