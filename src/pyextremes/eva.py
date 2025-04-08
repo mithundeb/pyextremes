@@ -1706,5 +1706,7 @@ class EVA:
                 ax=ax_pp,
             )
             ax_pp.set_title("P-P plot")
+            ax_pp.set_xlim(0, 1.0) #mdeb
+            ax_pp.set_ylim(0, 1.0) #mdeb
 
             return fig, (ax_rv, ax_pdf, ax_qq, ax_pp)
