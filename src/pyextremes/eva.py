@@ -1626,8 +1626,8 @@ class EVA:
             # Create axes
             ax_rv = fig.add_subplot(gs[0, 0])
             ax_pdf = fig.add_subplot(gs[0, 1])
-            ax_qq = fig.add_subplot(gs[1, 0])
-            ax_pp = fig.add_subplot(gs[1, 1])
+            ax_pp = fig.add_subplot(gs[1, 0])
+            ax_qq = fig.add_subplot(gs[1, 1])
 
             # Plot return values
             self.plot_return_values(
